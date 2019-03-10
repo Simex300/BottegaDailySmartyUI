@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import Logo from './logo';
 import Search from './search';
-import Results from './results';
+import RecentPosts from './recentPosts';
 
-export default class App extends Component {
+export default class Home extends Component {
 	render() {
 		return (
-			<div className='app'>
+			<div className='home'>
 				<Logo/>
 				<Search/>
-				<Results/>
+				<RecentPosts/>
 			</div>
 		);
 	}
