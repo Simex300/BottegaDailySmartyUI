@@ -3,7 +3,7 @@ import React from 'react';
 export default function Logo() {
     return (
         <div className='logo'>
-            Logo Goes right here
+            <img src="/assets/ds_circle_logo.png"/>
         </div>
     )
 }

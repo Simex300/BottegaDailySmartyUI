@@ -4,11 +4,14 @@ class Results extends Component {
     render() {
         return(
             <div className='results'>
-                <ul>
-                    <li>Post 1</li>
-                    <li>Post 2</li>
-                    <li>Post 3</li>
-                </ul>
+                <div className='results__wrapper'>
+                    <div className='results__heading'>Recent Posts</div>
+                    <ul className='results__content'>
+                        <li>recent post 0</li>
+                        <li>recent post 1</li>
+                        <li>recent post 2</li>
+                    </ul>
+                </div>
             </div>
         )
     }
