@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './components/home';
+
+import thunk from 'redux-thunk';
+
 import reducers from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const createStoreWithMiddleware = applyMiddleware(thunk)(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)));
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './style/main.scss';
+
+import Home from './components/home';
+import Results from './components/results';
 
 
 function main() {
@@ -17,8 +22,8 @@ function main() {
     <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter>
         <Switch>
-          <Route path="/" component={Home}/>
-          <Route path="/results" component={Home}/>
+          <Route path="/" exact component={Home}/>
+          <Route path="/results" component={Results}/>
         </Switch>
       </BrowserRouter>
     </Provider>

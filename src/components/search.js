@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 
+import { withRouter } from 'react-router-dom';
+
 class Search extends Component {
 
     handleFormSubmit = function({query}) {
         console.log("Handling query...");
+        this.props.history.push('/results');
     }
 
     renderInput(field) {
@@ -24,5 +27,7 @@ class Search extends Component {
 Search = reduxForm({
     form: 'searchbar'
 })(Search)
+
+Search = withRouter(Search);
 
 export default Search;
