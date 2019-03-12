@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Logo() {
+export default function Logo({size}) {
     return (
         <div className='logo'>
-            <img src="/assets/ds_circle_logo.png"/>
+            <img className={size ? size : ""} src="/assets/ds_circle_logo.png"/>
         </div>
     )
 }
