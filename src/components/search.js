@@ -4,10 +4,8 @@ import { Field, reduxForm } from 'redux-form';
 import { withRouter } from 'react-router-dom';
 
 class Search extends Component {
-
     handleFormSubmit = function({query}) {
-        console.log("Handling query...");
-        this.props.history.push('/results');
+        this.props.onSubmit(query)
     }
 
     renderInput(field) {
