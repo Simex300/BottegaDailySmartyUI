@@ -4,6 +4,7 @@ import * as actions from '../actions';
 
 import Logo from './logo';
 import Search from './search';
+import ResultPosts from './resultPosts';
 
 class Results extends Component {
 
@@ -16,6 +17,7 @@ class Results extends Component {
             <div className='results'>
                 <Logo size="small"/>
                 <Search onSubmit={(query) => this.handleSearchSubmit(query)}/>
+                <ResultPosts/>
             </div>
         )
     }
