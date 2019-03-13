@@ -16,11 +16,10 @@ export function fetchRecentPosts() {
                 })
                 console.log(response.data);
             });
-        console.log("Hey there");
     }
 }
 
-export function fetchPostsWithQuery(query) {
+export function fetchPostsWithQuery(query, callback) {
     return function(dispatch) {
         // Request goes here
         axios.get(`https://api.dailysmarty.com/search?q=${query}`)
@@ -29,8 +28,8 @@ export function fetchPostsWithQuery(query) {
                     type: FETCH_RESULTS_POSTS,
                     payload: response.data.posts
                 })
-                console.log(response.data);
+                if(callback)
+                    callback();
             });
-        console.log("Hey there");
     }
 }
