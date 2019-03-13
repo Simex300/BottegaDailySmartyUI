@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
+import AnimateHeight from 'react-animate-height';
 
 class Post extends Component {
+
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            height: 0
+        }
+    }
 
     renderTopics(topics) {
         topics = topics.map((topic, index) => {
@@ -24,8 +33,17 @@ class Post extends Component {
     }
 
 
+    toggleHover(inside) {
+        if(inside){
+            this.setState({ height: 70 });
+        }
+        else{
+            this.setState({ height: 0 });
+        }
+    }
+
     render() {
-        const {title, associated_topics, post_links, type} = this.props;
+        const {title, associated_topics, post_links, url_to_post, type} = this.props;
         if(type == "recent"){
             return(
                 <div className='post'>
@@ -40,16 +58,18 @@ class Post extends Component {
         }
         else{
             return(
-                <div className='result-post'>
+                <div className='result-post' onMouseEnter={() => {this.toggleHover(true)}} onMouseLeave={() => {this.toggleHover(false)}}>
                     <div className='result-post__topics'>
                         {this.renderTopics(associated_topics)}
                     </div>
                     <div className='result-post__title'>
-                        {title}
+                        <a href={url_to_post}>{title}</a>
                     </div>
-                    <div className='result-post__links'>
-                        {this.renderLinks(post_links)}
-                    </div>
+                    <AnimateHeight duration={500} height={this.state.height}>
+                        <div className='result-post__links'>
+                            {this.renderLinks(post_links)}
+                        </div>
+                    </AnimateHeight>
                 </div>
             )
         }
