@@ -16,8 +16,10 @@
 
     &__posts {
         display: grid;
-        justify-content: space-evenly;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 3rem;
+        grid-gap: 3rem;
+
+        @media screen and (min-width: 70rem) {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
