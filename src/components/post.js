@@ -20,15 +20,25 @@ class Post extends Component {
 
     renderLinks(links) {
         links = links.map((link, index) => {
+            var textUrl = link.link_url.slice(0, -2);
+            textUrl = textUrl.slice(textUrl.lastIndexOf('/') + 1);
+            textUrl = textUrl.split('-').map(string => {
+                return string.charAt(0).toUpperCase() + string.slice(1);
+            }).join(' ');
+
             return (
                 <div className='post-link' key={index}>
                     <div className='post-link__box'></div>
                     <div className='post-link__link'>
-                        <a href={link.link_url}>Useful Link #{index + 1}</a>
+                        <a href={link.link_url}>{textUrl}</a>
                     </div>
                 </div>
             )
         })
+
+        if(links.length == 0) {
+            return <div className='post-link__alert'>No post links</div>
+        }
         return links;
     }
 

@@ -19,12 +19,25 @@
         background-color: $color-gray-three;
         margin-right: 1.6rem;
     }
-
+    
     &__link {
         a {
             color: $color-gray-one;
             font-size: 1.4rem;
             line-height: 1.7rem;
         }
+    }
+    
+    &__alert {
+        min-height: 70px;
+        text-align: center;
+        padding-top: 2.5rem;
+
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        font-weight: 600;
+        
+        background: $color-gray-three;
+        color: $color-gray-one;
     }
 }
