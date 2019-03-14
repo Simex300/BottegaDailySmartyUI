@@ -1,0 +1,14 @@
+.result-posts {
+    justify-self: stretch;
+    display: grid;
+
+    &__wrapper {
+
+    }
+
+    &__posts {
+        display: grid;
+        grid-row-gap: 2rem;
+        justify-content: stretch;
+    }
+}

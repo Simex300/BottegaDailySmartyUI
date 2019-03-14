@@ -1,0 +1,23 @@
+.recent-posts {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+
+    &__wrapper {
+        display: grid;
+        grid-row-gap: 2.1rem;
+        width: 100%;
+    }
+
+    &__heading {
+        font-size: 1.4rem;
+        color: $color-blue-one;
+    }
+
+    &__posts {
+        display: grid;
+        justify-content: space-evenly;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 3rem;
+    }
+}

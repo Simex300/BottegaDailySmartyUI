@@ -25,10 +25,10 @@ class RecentPosts extends Component {
 
     render() {
         return(
-            <div className='recent-post'>
-                <div className='recent-post__wrapper'>
-                    <div className='recent-post__heading'>Recent Posts</div>
-                    <div className='recent-post__content'>
+            <div className='recent-posts'>
+                <div className='recent-posts__wrapper'>
+                    <div className='recent-posts__heading'>Recent Posts</div>
+                    <div className='recent-posts__posts'>
                         {this.renderPosts()}
                     </div>
                 </div>

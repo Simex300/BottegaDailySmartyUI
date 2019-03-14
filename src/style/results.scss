@@ -1,0 +1,7 @@
+.results {
+    @include windowGrid;
+    align-content: initial;
+
+    margin-top: 5.2rem;
+    grid-row-gap: 4.4rem;
+}

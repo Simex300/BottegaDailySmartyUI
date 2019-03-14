@@ -1,0 +1,26 @@
+.result-post {
+    display: grid;
+    align-content: space-around;
+    grid-row-gap: 2.2rem;
+
+    &__topics > * {
+        color: $color-blue-one;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
+
+    &__title {
+        color: $color-gray-one;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    &__links {
+        // display: flex;
+    }
+}

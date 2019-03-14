@@ -1,0 +1,30 @@
+.post {
+    &__title {
+        font-size: 1.6rem;
+        color: $color-gray-one;
+        font-weight: 600;
+    }
+    
+    &__topics {
+        font-size: 1.2rem;
+        color: $color-gray-two;
+    }
+}
+
+.post-link {
+    min-height: 70px;
+    display: flex;
+    &__box {
+        min-width: 70px;
+        background-color: $color-gray-three;
+        margin-right: 1.6rem;
+    }
+
+    &__link {
+        a {
+            color: $color-gray-one;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+        }
+    }
+}

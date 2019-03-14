@@ -9,14 +9,15 @@ class Search extends Component {
     }
 
     renderInput(field) {
-        return <input type="text" placeholder="Search DailySmarty" {...field.input} />
+        return <input className='search__input' type="text" placeholder="&#xf002;  Search DailySmarty" {...field.input} />
     }
 
     render() {
-        const { handleSubmit } = this.props;
+        const { handleSubmit, type } = this.props;
         return (
-            <form className='search' onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+            <form className={`search ${type ? type : ''}`} onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                 <Field name="query" component={this.renderInput}/>
+                <p className='search__text'>Press return to search</p>
             </form>
         )
     }

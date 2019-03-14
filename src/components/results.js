@@ -16,7 +16,7 @@ class Results extends Component {
         return(
             <div className='results'>
                 <Logo size="small"/>
-                <Search onSubmit={(query) => this.handleSearchSubmit(query)}/>
+                <Search type='search-small' onSubmit={(query) => this.handleSearchSubmit(query)}/>
                 <ResultPosts/>
             </div>
         )

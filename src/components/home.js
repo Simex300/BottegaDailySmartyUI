@@ -19,7 +19,7 @@ class Home extends Component {
 		return (
 			<div className='home'>
 				<Logo/>
-				<Search onSubmit={query => this.handleSearchSubmit(query)}/>
+				<Search type='search-big' onSubmit={query => this.handleSearchSubmit(query)}/>
 				<RecentPosts/>
 			</div>
 		);

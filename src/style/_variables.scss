@@ -1,0 +1,13 @@
+@mixin windowGrid {
+    height: 100vh;
+    width: 66vw;
+    
+    display: grid;
+    align-content: space-around;
+    justify-items: center;
+}
+
+$color-gray-one: #666;
+$color-gray-two: #b3b3b3;
+$color-gray-three: #d8d8d8;
+$color-blue-one: #0079ff;
